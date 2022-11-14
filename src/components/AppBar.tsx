@@ -25,6 +25,12 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (_, newValue) => {
+    setValue(newValue);
+  };
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -107,7 +113,7 @@ function ResponsiveDrawer(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          <SideNav />
+          <SideNav value={value} handleChange={handleChange} />
         </Drawer>
         <Drawer
           variant="permanent"
@@ -117,7 +123,7 @@ function ResponsiveDrawer(props) {
           }}
           open
         >
-          <SideNav />
+          <SideNav value={value} handleChange={handleChange} />
         </Drawer>
       </Box>
       <Box
