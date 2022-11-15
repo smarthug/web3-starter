@@ -6,8 +6,12 @@ import Tab from "@mui/material/Tab";
 import Toolbar from '@mui/material/Toolbar';
 import { Divider } from '@mui/material';
 
+interface SideNavProps {
+    value: number;
+    handleChange: (_: React.SyntheticEvent, newValue: number) => void
+}
 
-export default function SideNav({value, handleChange}) {
+export default function SideNav({ value, handleChange }: SideNavProps) {
 
     // const [value, setValue] = React.useState(0);
 
@@ -38,13 +42,13 @@ export default function SideNav({value, handleChange}) {
                 aria-label="Vertical tabs example"
                 sx={{ borderRight: 1, borderColor: "divider" }}
             >
-                <Tab label='Wallet' to='/' component={Link} value={0} />
-                <Tab label='Make Contract' to='/EtherContract' component={Link} value={1} />
-                <Tab label='Manage Contract' to='/EtherManage' component={Link} value={2} />
-                <Tab label='Upload File to AWS S3' to='/UploadFile' component={Link} value={3} />
-                <Tab label='NFT Preview' to='/Preview' component={Link} value={4} />
-                <Tab label='Manage NFTs' to='/ManageNFT' component={Link} value={5} />
-                <Tab label='Snapshot' to='/Scope' component={Link} value={6} />
+                <Tab label="Item One" />
+                <Tab label="Item Two" />
+                <Tab label="Item Three" />
+                <Tab label="Item Four" />
+                <Tab label="Item Five" />
+                <Tab label="Item Six" />
+                <Tab label="Item Seven" />
             </Tabs>
         </>
 

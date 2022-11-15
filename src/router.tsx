@@ -8,7 +8,7 @@ export default function Router() {
 
     return (
         <HashRouter>
-            <AppBar />
+            <AppBar/>
             <Routes>
                 <Route path={`/`} element={<Home />} />
             </Routes>
