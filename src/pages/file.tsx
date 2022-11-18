@@ -38,7 +38,7 @@ export default function Home() {
     function handleDrag3(event: React.DragEvent<HTMLDivElement>) {
         event.preventDefault();
         console.log(event)
-        window.electron.startDrag('userInfo.json')
+        window.electron.startDrag('assets/userInfo.json')
     }
 
     return (
@@ -62,8 +62,8 @@ export default function Home() {
 
                 files3
             </div >
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />
-            <img src="/assets/aa.png" />
+            {/* <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /> */}
+            {/* <img src="/assets/aa.png" /> */}
         </>
 
     )

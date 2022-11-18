@@ -87,9 +87,13 @@ ipcMain.on('ondragstart', (event, filePath) => {
   //     icon: iconName,
   //   });
   // }
-  
+  //"C:\Users\kirkl\Desktop\web3\web3-starter\out\web3-starter-win32-x64\resources\app\.webpack\renderer\assets\userInfo.json"
   event.sender.startDrag({
-    file: path.join(__dirname,filePath),
+    file: path.join(__dirname,"../renderer/assets/userInfo.json"),
     icon: iconName,
   });
+  // event.sender.startDrag({
+  //   file: path.join(__dirname,filePath),
+  //   icon: iconName,
+  // });
 });

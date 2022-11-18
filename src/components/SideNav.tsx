@@ -7,9 +7,8 @@ import Toolbar from '@mui/material/Toolbar';
 import { Divider } from '@mui/material';
 
 interface SideNavProps {
-    value: number;
-    // handleChange: (_: React.SyntheticEvent, newValue: number) => void
-    handleChange: (_: React.SyntheticEvent, newValue: number) => number
+    value: number
+    handleChange: (_: React.SyntheticEvent, newValue: number) => void
 }
 
 export default function SideNav({ value, handleChange }: SideNavProps) {
