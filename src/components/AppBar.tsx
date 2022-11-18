@@ -27,10 +27,10 @@ function ResponsiveDrawer() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
+    <Box >
+      {/* <CssBaseline /> */}
       <AppBar
-        position="fixed"
+        // position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
@@ -82,13 +82,6 @@ function ResponsiveDrawer() {
         >
           <SideNav value={value} handleChange={handleChange} />
         </Drawer>
-      </Box>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-      >
-        <Toolbar />
-
       </Box>
     </Box>
   );

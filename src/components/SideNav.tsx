@@ -8,7 +8,8 @@ import { Divider } from '@mui/material';
 
 interface SideNavProps {
     value: number;
-    handleChange: (_: React.SyntheticEvent, newValue: number) => void
+    // handleChange: (_: React.SyntheticEvent, newValue: number) => void
+    handleChange: (_: React.SyntheticEvent, newValue: number) => number
 }
 
 export default function SideNav({ value, handleChange }: SideNavProps) {
@@ -42,13 +43,13 @@ export default function SideNav({ value, handleChange }: SideNavProps) {
                 aria-label="Vertical tabs example"
                 sx={{ borderRight: 1, borderColor: "divider" }}
             >
-                <Tab label="Item One" />
-                <Tab label="Item Two" />
-                <Tab label="Item Three" />
-                <Tab label="Item Four" />
-                <Tab label="Item Five" />
-                <Tab label="Item Six" />
-                <Tab label="Item Seven" />
+                <Tab label="Item One" to="/" component={Link} />
+                <Tab label="Test" to="/test" component={Link} />
+                <Tab label="File" to="/file" component={Link} />
+                <Tab label="Item Four" to="/" component={Link} />
+                <Tab label="Item Five" to="/" component={Link} />
+                <Tab label="Item Six" to="/" component={Link} />
+                <Tab label="Item Seven" to="/" component={Link} />
             </Tabs>
         </>
 
